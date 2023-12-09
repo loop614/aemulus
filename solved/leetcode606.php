@@ -82,3 +82,43 @@ echo $examplestr2;
 echo "\n";
 echo $examplestr2 === $expected2 ? 'true': 'false';
 echo "\n";
+
+
+$example4 = new TreeNode(
+    25,
+    new TreeNode(
+        15,
+        new TreeNode(
+            10,
+            new TreeNode(4),
+            new TreeNode(12)
+        ),
+        new TreeNode(
+            22,
+            new TreeNode(18),
+            new TreeNode(24)
+        ),
+    ),
+    new TreeNode(
+        50,
+        new TreeNode(
+            35,
+            new TreeNode(31),
+            new TreeNode(44)
+        ),
+        new TreeNode(
+            70,
+            new TreeNode(66),
+            new TreeNode(90)
+        ),
+    ),
+);
+
+$expected4 = "25(15(10(4)(12))(22(18)(24)))(50(35(31)(44))(70(66)(90)))";
+$examplestr4 = $sol->tree2str($example4);
+echo $expected4;
+echo "<-->\n";
+echo $examplestr4;
+echo "\n";
+echo $examplestr4 === $expected4 ? 'true': 'false';
+echo "\n";
