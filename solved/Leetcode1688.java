@@ -15,10 +15,9 @@ class Solution {
 }
 
 
-public class Main {
-    public static void main(String[] args) {
-        int sol = new Solution().numberOfMatches(14);
-        System.out.println(sol);
-        
-    }
-}
+// public class Main {
+//     public static void main(String[] args) {
+//         int sol = new Solution().numberOfMatches(14);
+//         System.out.println(sol);
+//     }
+// }
