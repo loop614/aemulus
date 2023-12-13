@@ -13,6 +13,9 @@ import java.util.Arrays;
 //     }
 // }
 
+/**
+* https://www.javatpoint.com/quick-sort
+*/
 class Quick
 {
     int partition (int a[], int start, int end)
