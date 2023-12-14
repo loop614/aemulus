@@ -11,7 +11,7 @@
 //         output = sol.findSpecialInteger(new int[]{1,2,3,3});
 //         System.out.println(output == 3);
 //         output = sol.findSpecialInteger(new int[]{2,3,3});
-//         System.out.println(output == 3);
+//         System.out.println(output == 2);
 //     }
 // }
 
