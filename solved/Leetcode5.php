@@ -71,9 +71,6 @@ $iterations = [
 $sol = new Solution();
 
 foreach ($iterations["input"] as $index => $iteration) {
-    if ($index > 0) {
-        break;
-    }
     $res = $sol->longestPalindrome($iteration);
     if (!in_array($res, $iterations["output"][$index])) {
         echo "Error: " . $iterations["input"][$index] . "\n\n";
