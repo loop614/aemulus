@@ -9,15 +9,38 @@ import java.util.Arrays;
 
 //         output = sol.isAnagram("rat", "car");
 //         System.out.println(output == false);
-
-//         output = sol.isAnagram("a", "ab");
-//         System.out.println(output == false);
 //     }
 // }
 
 
 class Solution {
+    // best php sol
     public boolean isAnagram(String s, String t) {
+        if (s.length() != t.length()) {
+            return false;
+        }
+        int len = s.length();
+
+        int[] sa = new int[26];
+        int order, order1;
+        for(int i = 0; i < len; i++) {
+            order = ((int) s.charAt(i)) -97;
+            sa[order]++;
+            order1 = ((int) t.charAt(i)) -97;
+            sa[order1]--;
+        }
+
+        for(int i: sa) {
+            if (i != 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    // best java sol
+    public boolean isAnagram2(String s, String t) {
         if (s.length() != t.length()) {
             return false;
         }
@@ -26,12 +49,32 @@ class Solution {
         Arrays.sort(sc);
         Arrays.sort(tc);
 
-        for(int i = 0; i< sc.length; i++) {
-            if (sc[i] != tc[i]) {
-                return false;
+        return Arrays.equals(sc, tc);
+    }
+
+    public boolean isAnagram3(String s, String t) {
+        if (s.length() != t.length()) {
+            return false;
+        }
+        int tl = s.length();
+        int sl = tl;
+        boolean h;
+        String hpos = "";
+        for (int i=0; i < sl; i++) {
+            h = false;
+            for (int j=0; j < tl; j++) {
+                if (s.charAt(i) == t.charAt(j)) {
+                    h = true;
+                    hpos = Character.toString(t.charAt(j));
+                    break;
+                }
+            }
+            if (h) {
+                t = t.replaceFirst(String.join("/", hpos), "");
+                tl--;
             }
         }
 
-        return true;
+        return t.length() == 0;
     }
 }
