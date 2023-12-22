@@ -1,4 +1,6 @@
+.vscode/
 .mypy_cache/
 recycle/
 dotnetenv/
 golangenv/
+main
