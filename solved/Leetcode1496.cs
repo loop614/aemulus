@@ -7,8 +7,8 @@ public class Solution {
             allx.Add(x);
             ally.Add(y);
 
-            // switch was 56ms
-            // if elses was 53ms
+            // switch takes 56ms
+            // if elses take 53ms
             if (c == 'N') {
                 y++;
             }
