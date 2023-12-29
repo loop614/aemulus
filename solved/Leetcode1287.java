@@ -1,21 +1,21 @@
-// public class Main {
-//     public static void main(String[] args) {
-//         Solution sol = new Solution();
-//         int output;
-//         output = sol.findSpecialInteger(new int[]{1,2,2,6,6,6,6,7,10});
-//         System.out.println(output == 6);
-//         output = sol.findSpecialInteger(new int[]{1,1});
-//         System.out.println(output == 1);
-//         output = sol.findSpecialInteger(new int[]{1});
-//         System.out.println(output == 1);
-//         output = sol.findSpecialInteger(new int[]{1,2,3,3});
-//         System.out.println(output == 3);
-//         output = sol.findSpecialInteger(new int[]{2,3,3});
-//         System.out.println(output == 2);
-//     }
-// }
+public class Leetcode1287 {
+    public static void main(String[] args) {
+        Solution1287 sol = new Solution1287();
+        int output;
+        output = sol.findSpecialInteger(new int[]{1,2,2,6,6,6,6,7,10});
+        System.out.println(output == 6);
+        output = sol.findSpecialInteger(new int[]{1,1});
+        System.out.println(output == 1);
+        output = sol.findSpecialInteger(new int[]{1});
+        System.out.println(output == 1);
+        output = sol.findSpecialInteger(new int[]{1,2,3,3});
+        System.out.println(output == 3);
+        output = sol.findSpecialInteger(new int[]{2,3,3});
+        System.out.println(output == 2);
+    }
+}
 
-class Solution {
+class Solution1287 {
     public int findSpecialInteger(int[] arr) {
         int prev = arr[0];
         int occ = 0;

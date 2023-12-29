@@ -1,4 +1,4 @@
-class Solution {
+class Solution1688 {
     public int spinAround(int n, int numberOfMatchesPlayed) {
         if (n <= 1) {
             return numberOfMatchesPlayed;

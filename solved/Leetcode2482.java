@@ -16,7 +16,7 @@ import java.util.Arrays;
 // }
 
 
-class Solution {
+class Solution2482 {
     public int[][] onesMinusZeros(int[][] nums) {
         int[][] res = new int[nums.length][nums[0].length];
         int[] zeroRows = new int[nums.length];

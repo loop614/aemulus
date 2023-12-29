@@ -1,27 +1,27 @@
-// public class Main {
-//     public static void main(String[] args) {
-//         Solution sol = new Solution();
-//         String output;
-//         output = sol.intToRoman(1);
-//         System.out.println(output);
-//         System.out.println(output.equals("I"));
-//         output = sol.intToRoman(58);
-//         System.out.println(output);
-//         System.out.println(output.equals("LVIII"));
-//         output = sol.intToRoman(22);
-//         System.out.println(output);
-//         System.out.println(output.equals("XXII"));
-//         output = sol.intToRoman(72);
-//         System.out.println(output);
-//         System.out.println(output.equals("LXXII"));
-//         output = sol.intToRoman(99);
-//         System.out.println(output);
-//         System.out.println(output.equals("XCIX"));
-//         output = sol.intToRoman(1994);
-//         System.out.println(output);
-//         System.out.println(output.equals("MCMXCIV"));
-//     }
-// }
+public class Leetcode12 {
+    public static void main(String[] args) {
+        Solution sol = new Solution();
+        String output;
+        output = sol.intToRoman(1);
+        System.out.println(output);
+        System.out.println(output.equals("I"));
+        output = sol.intToRoman(58);
+        System.out.println(output);
+        System.out.println(output.equals("LVIII"));
+        output = sol.intToRoman(22);
+        System.out.println(output);
+        System.out.println(output.equals("XXII"));
+        output = sol.intToRoman(72);
+        System.out.println(output);
+        System.out.println(output.equals("LXXII"));
+        output = sol.intToRoman(99);
+        System.out.println(output);
+        System.out.println(output.equals("XCIX"));
+        output = sol.intToRoman(1994);
+        System.out.println(output);
+        System.out.println(output.equals("MCMXCIV"));
+    }
+}
 
 
 class Solution {

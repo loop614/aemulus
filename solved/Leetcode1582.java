@@ -26,7 +26,7 @@ import java.util.Arrays;
 // }
 
 
-class Solution {
+class Solution1582 {
     public int numSpecial(int[][] nums) {
         int specialCount = 0;
         boolean isSpecial = false;

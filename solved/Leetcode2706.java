@@ -20,7 +20,7 @@ import java.util.Arrays;
 // }
 
 
-class Solution {
+class Solution2706 {
     public int buyChoco(int[] nums, int money) {
         int minVal = 101, minVal2 = 101, exMinVal = 101;
         for(int i = 0; i < nums.length; i++) {

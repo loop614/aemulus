@@ -1,17 +1,17 @@
 import java.util.Arrays;
 
-// public class Main {
-//     public static void main(String[] args) {
-//         Solution sol = new Solution();
-//         int output;
-//         output = sol.maxProduct(new int[]{3,4,5,2});
-//         System.out.println(output);
-//         System.out.println(output == 12);
-//         output = sol.maxProduct(new int[]{1,5,4,5});
-//         System.out.println(output);
-//         System.out.println(output == 16);
-//     }
-// }
+public class Leetcode1464 {
+    public static void main(String[] args) {
+        Solution1464 sol = new Solution1464();
+        int output;
+        output = sol.maxProduct(new int[]{3,4,5,2});
+        System.out.println(output);
+        System.out.println(output == 12);
+        output = sol.maxProduct(new int[]{1,5,4,5});
+        System.out.println(output);
+        System.out.println(output == 16);
+    }
+}
 
 /**
 * https://www.javatpoint.com/quick-sort
@@ -51,7 +51,7 @@ class Quick
 }
 
 
-class Solution {
+class Solution1464 {
     public int maxProduct2(int[] nums) {
         double max = 0;
         double curr = 0;

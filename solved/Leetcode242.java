@@ -1,19 +1,19 @@
 import java.util.Arrays;
 
-// public class Main {
-//     public static void main(String[] args) {
-//         Solution sol = new Solution();
-//         boolean output;
-//         output = sol.isAnagram("anagram", "nagaram");
-//         System.out.println(output == true);
+public class Leetcode242 {
+    public static void main(String[] args) {
+        Solution242 sol = new Solution242();
+        boolean output;
+        output = sol.isAnagram("anagram", "nagaram");
+        System.out.println(output == true);
 
-//         output = sol.isAnagram("rat", "car");
-//         System.out.println(output == false);
-//     }
-// }
+        output = sol.isAnagram("rat", "car");
+        System.out.println(output == false);
+    }
+}
 
 
-class Solution {
+class Solution242 {
     // best php sol
     public boolean isAnagram(String s, String t) {
         if (s.length() != t.length()) {
