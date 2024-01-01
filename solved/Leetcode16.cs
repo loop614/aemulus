@@ -57,22 +57,17 @@ public class Solution {
     }
 }
 
+Solution sol = new();
+int res;
 
-public class Aemulus {
-    public static void Main(String[] args) {
-        Solution sol = new();
-        int res;
+res = sol.ThreeSumClosest(new []{-1,2,1,-4}, 1);
+Console.WriteLine(res);
+Console.WriteLine(res == 2);
 
-        res = sol.ThreeSumClosest(new []{-1,2,1,-4}, 1);
-        Console.WriteLine(res);
-        Console.WriteLine(res == 2);
+res = sol.ThreeSumClosest(new []{0,0,0}, 1);
+Console.WriteLine(res);
+Console.WriteLine(res == 0);
 
-        res = sol.ThreeSumClosest(new []{0,0,0}, 1);
-        Console.WriteLine(res);
-        Console.WriteLine(res == 0);
-
-        res = sol.ThreeSumClosest(new []{4,0,5,-5,3,3,0,-4,-5}, -2);
-        Console.WriteLine(res);
-        Console.WriteLine(res == -2);
-    }
-}
+res = sol.ThreeSumClosest(new []{4,0,5,-5,3,3,0,-4,-5}, -2);
+Console.WriteLine(res);
+Console.WriteLine(res == -2);

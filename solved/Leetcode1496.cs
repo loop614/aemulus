@@ -32,19 +32,14 @@ public class Solution {
     }
 }
 
+Solution sol = new();
+bool res;
+String input = "NES";
+res = sol.IsPathCrossing(input);
+Console.Write(false == res);
+Console.Write("\n");
 
-public class Aemulus {
-    public static void Main(String[] args) {
-        Solution sol = new();
-        bool res;
-        String input = "NES";
-        res = sol.IsPathCrossing(input);
-        Console.Write(false == res);
-        Console.Write("\n");
-
-        input = "NESWW";
-        res = sol.IsPathCrossing(input);
-        Console.Write(res == true);
-        Console.Write("\n");
-    }
-}
+input = "NESWW";
+res = sol.IsPathCrossing(input);
+Console.Write(res == true);
+Console.Write("\n");

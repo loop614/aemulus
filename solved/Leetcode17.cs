@@ -114,31 +114,27 @@ public class Solution {
     }
 }
 
-public class Aemulus {
-    public static void Main(String[] args) {
-        Solution sol = new();
-        IList<string> res;
-        // a b c
-        // d e f
+Solution sol = new();
+IList<string> res;
+// a b c
+// d e f
 
-        res = sol.LetterCombinations("234");
-        Console.WriteLine(String.Join(",", res));
-        Console.WriteLine("adg,adh,adi,aeg,aeh,aei,afg,afh,afi,bdg,bdh,bdi,beg,beh,bei,bfg,bfh,bfi,cdg,cdh,cdi,ceg,ceh,cei,cfg,cfh,cfi");
+res = sol.LetterCombinations("234");
+Console.WriteLine(String.Join(",", res));
+Console.WriteLine("adg,adh,adi,aeg,aeh,aei,afg,afh,afi,bdg,bdh,bdi,beg,beh,bei,bfg,bfh,bfi,cdg,cdh,cdi,ceg,ceh,cei,cfg,cfh,cfi");
 
-        res = sol.LetterCombinations("23");
-        Console.WriteLine(String.Join(",", res));
-        Console.WriteLine("ad,ae,af,bd,be,bf,cd,ce,cf");
+res = sol.LetterCombinations("23");
+Console.WriteLine(String.Join(",", res));
+Console.WriteLine("ad,ae,af,bd,be,bf,cd,ce,cf");
 
-        res = sol.LetterCombinations("67");
-        Console.WriteLine(String.Join(",", res));
-        Console.WriteLine("mp,mq,mr,ms,np,nq,nr,ns,op,oq,or,os");
+res = sol.LetterCombinations("67");
+Console.WriteLine(String.Join(",", res));
+Console.WriteLine("mp,mq,mr,ms,np,nq,nr,ns,op,oq,or,os");
 
-        res = sol.LetterCombinations("");
-        Console.WriteLine(String.Join(",", res));
-        Console.WriteLine("[]");
+res = sol.LetterCombinations("");
+Console.WriteLine(String.Join(",", res));
+Console.WriteLine("[]");
 
-        res = sol.LetterCombinations("2");
-        Console.WriteLine(String.Join(",", res));
-        Console.WriteLine("[a,b,c]");
-    }
-}
+res = sol.LetterCombinations("2");
+Console.WriteLine(String.Join(",", res));
+Console.WriteLine("[a,b,c]");

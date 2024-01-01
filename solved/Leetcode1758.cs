@@ -48,23 +48,17 @@ public class Solution {
     }
 }
 
+Solution sol = new();
+int res;
 
-public class Aemulus {
-    public static void Main(String[] args) {
-        Solution sol = new();
-        int res;
+res = sol.MinOperations("0100");
+Console.WriteLine(res);
+Console.WriteLine(res == 1);
 
-        res = sol.MinOperations("0100");
-        Console.WriteLine(res);
-        Console.WriteLine(res == 1);
+res = sol.MinOperations("10");
+Console.WriteLine(res);
+Console.WriteLine(res == 0);
 
-        res = sol.MinOperations("10");
-        Console.WriteLine(res);
-        Console.WriteLine(res == 0);
-
-        res = sol.MinOperations("1111");
-        Console.WriteLine(res);
-        Console.WriteLine(res == 2);
-
-    }
-}
+res = sol.MinOperations("1111");
+Console.WriteLine(res);
+Console.WriteLine(res == 2);

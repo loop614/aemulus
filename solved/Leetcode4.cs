@@ -13,7 +13,7 @@ public class Solution {
 
         return combine;
     }
-    
+
     public double FindMedianSortedArrays(int[] nums1, int[] nums2) {
         List<int> combine = combineTwoArrays(nums1, nums2, new List<int>(), 0, 0);
         double median;
@@ -28,3 +28,14 @@ public class Solution {
         return median;
     }
 }
+
+Solution sol = new Solution();
+double output;
+
+output = sol.FindMedianSortedArrays([1,3], [2]);
+Console.WriteLine(output);
+Console.WriteLine(output == 2);
+
+output = sol.FindMedianSortedArrays([1,2], [3,4]);
+Console.WriteLine(output);
+Console.WriteLine(output == 2.5);

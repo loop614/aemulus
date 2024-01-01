@@ -1,14 +1,12 @@
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     public int val;
- *     public ListNode next;
- *     public ListNode(int val=0, ListNode next=null) {
- *         this.val = val;
- *         this.next = next;
- *     }
- * }
- */
+public class ListNode {
+    public int val;
+    public ListNode next;
+    public ListNode(int val=0, ListNode next=null) {
+        this.val = val;
+        this.next = next;
+    }
+}
+
 public class Solution {
     public ListNode AddTwoNumbers(ListNode l1, ListNode l2) {
         ListNode solutionRoot = null;
@@ -43,6 +41,31 @@ public class Solution {
             current.val = carryVal;
             previous.next = current;
         }
+
         return solutionRoot;
     }
+
+    public void PrintList(ListNode root) {
+        while (root != null) {
+            Console.Write(root.val);
+            Console.Write(" ");
+            root = root.next;
+        }
+    }
 }
+
+Solution sol = new Solution();
+ListNode res = new ListNode();
+
+ListNode three = new ListNode(3);
+ListNode four = new ListNode(4, three);
+ListNode two = new ListNode(2, four);
+
+ListNode four2 = new ListNode(4);
+ListNode six = new ListNode(6, four2);
+ListNode five = new ListNode(5, six);
+
+res = sol.AddTwoNumbers(two, five);
+sol.PrintList(res);
+Console.Write("\n");
+Console.WriteLine("7 0 8");

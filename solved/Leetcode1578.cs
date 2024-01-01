@@ -57,30 +57,25 @@ public class Solution
     }
 }
 
+Solution sol = new();
+int res;
+res = sol.MinCost("aaabbbabbbb", new []{3,5,10,7,5,3,5,5,4,8,1});
+Console.WriteLine(res);
+Console.WriteLine(res == 26);
 
-public class Aemulus {
-    public static void Main(String[] args) {
-        Solution sol = new();
-        int res;
-        res = sol.MinCost("aaabbbabbbb", new []{3,5,10,7,5,3,5,5,4,8,1});
-        Console.WriteLine(res);
-        Console.WriteLine(res == 26);
-
-        res = sol.MinCost("aaaa", new []{5,4,8,1});
-        Console.WriteLine(res);
-        Console.WriteLine(res == 10);
+res = sol.MinCost("aaaa", new []{5,4,8,1});
+Console.WriteLine(res);
+Console.WriteLine(res == 10);
 
 
-        res = sol.MinCost("abaac", new []{1,2,3,4,5});
-        Console.WriteLine(res);
-        Console.WriteLine(res == 3);
+res = sol.MinCost("abaac", new []{1,2,3,4,5});
+Console.WriteLine(res);
+Console.WriteLine(res == 3);
 
-        res = sol.MinCost("abc", new []{1,2,3});
-        Console.WriteLine(res);
-        Console.WriteLine(res == 0);
+res = sol.MinCost("abc", new []{1,2,3});
+Console.WriteLine(res);
+Console.WriteLine(res == 0);
 
-        res = sol.MinCost("aabaa", new []{1,2,3,4,1});
-        Console.WriteLine(res);
-        Console.WriteLine(res == 2);
-    }
-}
+res = sol.MinCost("aabaa", new []{1,2,3,4,1});
+Console.WriteLine(res);
+Console.WriteLine(res == 2);
