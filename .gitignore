@@ -2,6 +2,8 @@
 .mypy_cache/
 recycle/
 dotnetenv/
+list/
 golangenv/
 main
 aemulus.sln
+notes.txt
