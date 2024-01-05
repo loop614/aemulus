@@ -2,7 +2,7 @@ class TreeNode {
     public int val;
     public List<TreeNode> children;
 
-    public TreeNode(int val, TreeNode child1 = null, TreeNode child2 = null) {
+    public TreeNode(int val, TreeNode? child1 = null, TreeNode? child2 = null) {
         this.val = val;
         this.children = new List<TreeNode>();
         if (child1 != null) {
@@ -19,6 +19,13 @@ class TreeNode {
 }
 
 class Solution {
+    private void CountLeafs(TreeNode root, ref int count) {
+        count++;
+        for (int i = 0; i < root.children.Count; i++) {
+            CountLeafs(root.children[i], ref count);
+        }
+    }
+
     private void LevelOrderSpin(int[] currs, int[] arr, int levelWidth) {
     }
 
@@ -30,7 +37,7 @@ class Solution {
         return new int[]{};
     }
 
-    private void InOrderSpin(TreeNode root, int[] arr)  {
+    private void InOrderSpin(TreeNode root, int[] arr, int pivot)  {
     }
 
     public int[] InOrderRecursive(TreeNode root) {
@@ -51,11 +58,22 @@ class Solution {
         return new int[]{};
     }
 
-    private void PostOrderSpin(TreeNode root, int[] arr)  {
+    private void PostOrderSpin(TreeNode root, int[] arr, ref int pivot)  {
+        for (int i = 0; i < root.children.Count; i++) {
+            PostOrderSpin(root.children[i], arr, ref pivot);
+        }
+        arr[pivot] = root.val;
+        pivot++;
     }
 
     public int[] PostOrderRecursive(TreeNode root) {
-        return new int[]{};
+        int resCount = 0;
+        CountLeafs(root, ref resCount);
+        int[] res = new int[resCount];
+        int pivot = 0;
+        PostOrderSpin(root, res, ref pivot);
+
+        return res;
     }
 
     public int[] PostOrder(TreeNode root) {
@@ -115,16 +133,16 @@ for (int i = 0; i < expectedArr.Length; i++) {
     Console.Write(names[i]);
     Console.Write("\n");
     Console.Write(string.Join(", ", expectedArr[i]));
-    Console.Write("<-.");
+    Console.Write("<-");
     Console.Write(string.Join(", ", solArray["recursive"][i]));
     Console.Write("\n");
-    Console.Write(expectedArr[i] == solArray["recursive"][i] ? "true": "false");
+    Console.Write(expectedArr[i].SequenceEqual(solArray["recursive"][i]) ? "true": "false");
     Console.Write("\n");
     Console.Write(string.Join(", ", expectedArr[i]));
-    Console.Write("<-.");
+    Console.Write("<-");
     Console.Write(string.Join(", ", solArray["linear"][i]));
     Console.Write("\n");
-    Console.Write(expectedArr[i] == solArray["linear"][i] ? "true": "false");
+    Console.Write(expectedArr[i].SequenceEqual(solArray["linear"][i]) ? "true": "false");
     Console.Write("\n");
     Console.Write("-----------------------");
     Console.Write("\n");
