@@ -171,18 +171,17 @@ class Solution {
         $runLoop = true;
         $count = 0;
         $stack = [];
-        $curr = $root;
-        while ($curr !== null || count($stack) !== 0) {
-            while ($curr !== null) {
-                $arr[] = $curr->val;
-                if ($curr->right !== null) {
-                    $stack[] = $curr;
+        while ($root !== null || count($stack) !== 0) {
+            while ($root !== null) {
+                $arr[] = $root->val;
+                if ($root->right !== null) {
+                    $stack[] = $root;
                 }
-                $curr = $curr->left;
+                $root = $root->left;
             }
 
-            $curr = array_pop($stack);
-            $curr = $curr?->right;
+            $root = array_pop($stack);
+            $root = $root?->right;
         }
 
         return $arr;
