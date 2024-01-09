@@ -1,31 +1,22 @@
 public class Solution {
     public int LengthOfLongestSubstring(string s) {
-        string currentLogestSub = "";
-        string longestSub = "";
+        Queue<char> queue = new();
+        int maxSubstring = 0;
         foreach (char letter in s) {
-            if (!currentLogestSub.Contains(letter.ToString())) {
-                currentLogestSub += letter.ToString();
-                continue;
-            }
-
-            if (currentLogestSub.Length > longestSub.Length) {
-                longestSub = currentLogestSub;
-            }
-            foreach (char letter2 in currentLogestSub) {
-                if (currentLogestSub.Length == 1) {
-                    break;
+            if (queue.Contains(letter)) {
+                if (maxSubstring < queue.Count) {
+                    maxSubstring = queue.Count;
                 }
-                currentLogestSub = currentLogestSub.Remove(0, 1);
-                if (letter2 == letter) {
-                    break;
+                while (queue.Count != 0 && letter != queue.Dequeue()) {
                 }
             }
-            if (!currentLogestSub.Contains(letter.ToString())) {
-                currentLogestSub += letter.ToString();
-            }
+            queue.Enqueue(letter);
+        }
+        if (maxSubstring < queue.Count) {
+            return queue.Count;
         }
 
-        return longestSub.Length > currentLogestSub.Length ? longestSub.Length : currentLogestSub.Length;
+        return maxSubstring;
     }
 }
 
