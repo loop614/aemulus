@@ -26,15 +26,81 @@ class Solution {
         }
     }
 
-    private void LevelOrderSpin(int[] currs, int[] arr, int levelWidth) {
+    private void LevelOrderSpin(TreeNode root, int[] res, ref int pivot, Queue<TreeNode> currLevel, int levelWidth) {
+        int nextLevelWidth = 0;
+        bool breakOut = false;
+        List<TreeNode> newCurrs = new();
+
+        for (int i = 0; i < currLevel.Count; i++) {
+            TreeNode currNode = currLevel.ElementAt(i);
+            breakOut = currNode.children.Count == 0;
+            for (int j = 0; j < currNode.children.Count; j++) {
+                newCurrs.Add(currNode.children.ElementAt(j));
+                nextLevelWidth++;
+            }
+        }
+
+        for(int k=0; k < newCurrs.Count; k++) {
+            currLevel.Enqueue(newCurrs.ElementAt(k));
+        }
+
+        while (levelWidth-- > 0) {
+            TreeNode temp = currLevel.Dequeue();
+            res[pivot] = temp.val;
+            pivot++;
+        }
+        if (breakOut) { return; }
+
+        LevelOrderSpin(root, res, ref pivot, currLevel, nextLevelWidth);
     }
 
     public int[] LevelOrderRecursive(TreeNode root) {
-        return new int[]{};
+        int resCount = 0;
+        CountLeafs(root, ref resCount);
+        int[] res = new int[resCount];
+        Queue<TreeNode> currLevel = new();
+        currLevel.Enqueue(root);
+        int pivot = 0;
+        LevelOrderSpin(root, res, ref pivot, currLevel, 1);
+
+        return res;
     }
 
     public int[] LevelOrder(TreeNode root) {
-        return new int[]{};
+        int resCount = 0;
+        CountLeafs(root, ref resCount);
+        int[] res = new int[resCount];
+        int pivot = 0;
+        bool runLoop = true;
+        int levelWidth, count;
+        Queue<TreeNode> current = new();
+        List<TreeNode> newCurrs = [];
+        current.Enqueue(root);
+
+        while (runLoop) {
+            runLoop = false;
+            levelWidth = 0;
+            newCurrs.Clear();
+            foreach(TreeNode curr in current) {
+                foreach(TreeNode child in curr.children) {
+                    newCurrs.Add(child);
+                    levelWidth++;
+                    runLoop = true;
+                }
+            }
+
+            for(int k=0; k < newCurrs.Count; k++) {
+                current.Enqueue(newCurrs.ElementAt(k));
+            }
+
+            count = current.Count - levelWidth;
+            while(count-- > 0) {
+                res[pivot] = current.Dequeue().val;
+                pivot++;
+            }
+        }
+
+        return res;
     }
 
     private void InOrderSpin(TreeNode root, int[] arr, int pivot)  {
