@@ -14,7 +14,7 @@ public class Solution {
         return combine;
     }
 
-    public double FindMedianSortedArrays(int[] nums1, int[] nums2) {
+    public double FindMedianSortedArrays2(int[] nums1, int[] nums2) {
         List<int> combine = combineTwoArrays(nums1, nums2, new List<int>(), 0, 0);
         double median;
         if (combine.Count % 2 == 0) {
@@ -26,6 +26,42 @@ public class Solution {
         }
 
         return median;
+    }
+
+    public double FindMedianSortedArrays(int[] nums1, int[] nums2) {
+        int[] combine = new int[nums1.Length + nums2.Length];
+        int i = 0, j = 0, k = 0;
+        while (true) {
+            if (i < nums1.Length && j < nums2.Length) {
+                if (nums1[i] < nums2[j]) {
+                    combine[k] = nums1[i];
+                    ++k;
+                    ++i;
+                    continue;
+                } else {
+                    combine[k] = nums2[j];
+                    ++k;
+                    ++j;
+                    continue;
+                }
+            }
+            while (i < nums1.Length) {
+                combine[k] = nums1[i];
+                ++k;
+                ++i;
+            }
+            while (j < nums2.Length) {
+                combine[k] = nums2[j];
+                ++k;
+                ++j;
+            }
+            break;
+        }
+        if (k % 2 == 0) {
+            return (double)(combine[k / 2] + combine[(k / 2) - 1]) / 2;
+        }
+
+        return combine[(k - 1)/ 2];
     }
 }
 
