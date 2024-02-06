@@ -1,3 +1,11 @@
+/*
+21. Merge Two Sorted Lists
+Easy
+
+You are given the heads of two sorted linked lists list1 and list2.
+Merge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists.
+Return the head of the merged linked list.
+*/
 public class ListNode {
     public int val;
     public ListNode? next;
@@ -36,6 +44,10 @@ public class Solution {
     }
 
     // overly safe, no garbage solution ( others returning root.next )
+    /*
+     * beats 48% by execution time
+     * beats 22% by memory usage
+     */
     public ListNode? MergeTwoLists(ListNode? list1, ListNode? list2) {
         ListNode? curr = null, root = null;
 
@@ -62,6 +74,56 @@ public class Solution {
         }
 
         return root;
+    }
+
+    // unsafe
+    /*
+     * beats 56% by execution time
+     * beats 63% by memory usage
+     */
+    public ListNode? MergeTwoLists2(ListNode list1, ListNode list2) {
+        ListNode root = new(-1);
+        ListNode curr = root;
+
+        while(true) {
+            if (list1 == null && list2 != null) {
+                while (true) {
+                    curr.next = new ListNode(list2.val);
+                    if (list2.next == null) {
+                        break;
+                    }
+                    list2 = list2.next;
+                    curr = curr.next;
+                }
+                break;
+            }
+            else if (list1 != null && list2 == null) {
+                while (true) {
+                    curr.next = new ListNode(list1.val);
+                    if (list1.next == null) {
+                        break;
+                    }
+                    list1 = list1.next;
+                    curr = curr.next;
+                }
+                break;
+            }
+            else if (list1 == null && list2 == null) {
+                break;
+            }
+            else if (list1.val > list2.val) {
+                curr.next = new ListNode(list2.val);
+                list2 = list2.next;
+                curr = curr.next;
+            }
+            else  {
+                curr.next = new ListNode(list1.val);
+                list1 = list1.next;
+                curr = curr.next;
+            }
+        }
+
+        return root.next;
     }
 }
 

@@ -1,3 +1,9 @@
+/*
+209. Minimum Size Subarray Sum
+Medium
+Given an array of positive integers nums and a positive integer target, return the minimal length of a subarray
+whose sum is greater than or equal to target. If there is no such subarray, return 0 instead.
+*/
 /**
  * @param {number} target
  * @param {number[]} nums
@@ -32,6 +38,9 @@ let minSubArrayLenWalking = function (target, nums) {
  * @param {number} target
  * @param {number[]} nums
  * @return {number}
+ *
+ * beats 34% by execution time
+ * beats 99% by memory usage
  */
 let minSubArrayLenDoubleFor = function (target, nums) {
     let curSum = 0;

@@ -1,4 +1,10 @@
-// must remove all free cals for leetcode
+/*
+19. Remove Nth Node From End of List
+Medium
+Given the head of a linked list, remove the nth node from the end of the list and return its head
+*/
+
+// (!) must remove all free cals for leetcode
 
 #include <iostream>
 
@@ -14,6 +20,10 @@ struct ListNode {
 
 class Solution {
 public:
+    /**
+     * beats 100% by execution time
+     * beats 54% by memory usage
+     */
     ListNode* removeNthFromEnd(ListNode* head, int n) {
         ListNode* root = head;
         ListNode* headCopy = head;

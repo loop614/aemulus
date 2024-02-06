@@ -1,10 +1,22 @@
 package main
 
+/*
+1422. Maximum Score After Splitting a String
+Easy
+
+Given a string s of zeros and ones, return the maximum score after splitting the string into two non-empty substrings (i.e. left substring and right substring).
+The score after splitting a string is the number of zeros in the left substring plus the number of ones in the right substring.
+*/
+
 import (
 	"fmt"
 	"strings"
 )
 
+/*
+* beats 74% by execution time
+* beats 96% by memory usage
+*/
 func maxScore(s string) int {
 	var scorecount int = 0
 	var maxsum int = 0

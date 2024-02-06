@@ -1,4 +1,9 @@
-
+/*
+326. Power of Three
+Easy
+Given an integer n, return true if it is a power of three. Otherwise, return false.
+An integer n is a power of three, if there exists an integer x such that n == 3x.
+*/
 public class Solution {
     public bool IsPowerOfThree3(int n) {
         return Math.Log(n, 3) % 1 == 0;
@@ -13,6 +18,10 @@ public class Solution {
         return false;
     }
 
+    /*
+     * beats 99% by execution time
+     * beats 72% by memory usage
+     */
     public bool IsPowerOfThree(int n) {
         if (n == 0) {
             return false;

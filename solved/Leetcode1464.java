@@ -1,3 +1,8 @@
+/*
+1464. Maximum Product of Two Elements in an Array
+Easy
+Given the array of integers nums, you will choose two different indices i and j of that array. Return the maximum value of (nums[i]-1)*(nums[j]-1).
+*/
 import java.util.Arrays;
 
 public class Leetcode1464 {
@@ -69,6 +74,10 @@ class Solution1464 {
         return (int) max;
     }
 
+    /*
+     * beats 68% by execution time
+     * beats 25% by memory usage
+     */
     public int maxProduct1(int[] nums) {
         int nlen = nums.length - 1;
         Quick q1 = new Quick();

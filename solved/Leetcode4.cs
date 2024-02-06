@@ -1,3 +1,9 @@
+/*
+4. Median of Two Sorted Arrays
+Hard
+Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.
+The overall run time complexity should be O(log (m+n)).
+*/
 public class Solution {
     public static List<int> combineTwoArrays(int[] nums1, int[] nums2, List<int> combine, int i, int j) {
         int value1 = nums1.Length > i ? nums1[i] : int.MaxValue;
@@ -28,6 +34,10 @@ public class Solution {
         return median;
     }
 
+    /*
+     * beats 89% by execution time
+     * beats 67% by memory usage
+     */
     public double FindMedianSortedArrays(int[] nums1, int[] nums2) {
         int[] combine = new int[nums1.Length + nums2.Length];
         int i = 0, j = 0, k = 0;

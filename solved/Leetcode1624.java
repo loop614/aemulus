@@ -1,3 +1,9 @@
+/*
+1624. Largest Substring Between Two Equal Characters
+Easy
+Given a string s, return the length of the longest substring between two equal characters, excluding the two characters. If there is no such substring return -1.
+A substring is a contiguous sequence of characters within a string.
+*/
 public class Leetcode1624 {
     public static void main(String[] args) {
         Solution1624 sol = new Solution1624();
@@ -38,6 +44,10 @@ class Solution1624 {
         return max;
     }
 
+    /*
+     * beats 100% by execution time
+     * beats 88% by memory usage
+     */
     public int maxLengthBetweenEqualCharacters(String s) {
         int slen = s.length();
         if (slen < 3) {

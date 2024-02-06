@@ -1,3 +1,9 @@
+/*
+28. Find the Index of the First Occurrence in a String
+Easy
+Given two strings needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.
+*/
+
 #include <iostream>
 #include <string>
 
@@ -5,6 +11,10 @@ using namespace std;
 
 class Solution {
 public:
+    /*
+     * beats 44% by execution time
+     * beats 68% by memory usage
+     */
     int strStr(string haystack, string needle) {
         bool same;
         int pos = -1;

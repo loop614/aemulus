@@ -1,3 +1,9 @@
+/*
+23. Merge k Sorted Lists
+Hard
+You are given an array of k linked-lists lists, each linked-list is sorted in ascending order.
+Merge all the linked-lists into one sorted linked-list and return it.
+*/
 public class ListNode {
     public int val;
     public ListNode next;
@@ -8,6 +14,10 @@ public class ListNode {
 }
 
 public class Solution {
+    /*
+     * beats 30% by execution time
+     * beats 38% by memory usage
+     */
     public ListNode MergeKLists(ListNode[] lists) {
         bool sbreak = true;
         for (int i = 0; i < lists.Length; i++) {

@@ -2,6 +2,10 @@
 
 class Solution {
     // best php sol
+    /*
+     * beats 68% by execution time
+     * beats 84% by memory usage
+     */
     public function isAnagram(String $s, String $t): bool {
         if (strlen($s) != strlen($t)) {
             return false;

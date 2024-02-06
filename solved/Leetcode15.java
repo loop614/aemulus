@@ -1,3 +1,9 @@
+/*
+15. 3Sum
+Medium
+Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.
+Notice that the solution set must not contain duplicate triplets.
+*/
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -26,6 +32,10 @@ public class Leetcode15 {
 }
 
 class Solution15 {
+    /*
+     * beats 28% by execution time
+     * beats 17% by memory usage
+     */
     public List<List<Integer>> threeSum(int[] nums) {
         HashSet<List<Integer>> res = new HashSet<>();
         Arrays.sort(nums);

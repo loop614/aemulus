@@ -1,4 +1,14 @@
+/*
+3. Longest Substring Without Repeating Characters
+Medium
+Given a string s, find the length of the longest substring without repeating characters.
+*/
+
 public class Solution {
+    /*
+     * beats 99% by execution time
+     * beats 74% by memory usage
+     */
     public int LengthOfLongestSubstring(string s) {
         Queue<char> queue = new();
         int maxSubstring = 0;

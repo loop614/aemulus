@@ -1,4 +1,15 @@
+/*
+16. 3Sum Closest
+Medium
+Given an integer array nums of length n and an integer target, find three integers in nums such that the sum is closest to target.
+Return the sum of the three integers.
+You may assume that each input would have exactly one solution.
+*/
 public class Solution {
+    /**
+     * beats 99% by execution time
+     * beats 71% by memory usage
+     */
     public int ThreeSumClosest(int[] nums, int target) {
         int minDistance = 100000;
         int curDistance;

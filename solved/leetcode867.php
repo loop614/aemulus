@@ -1,9 +1,17 @@
 <?php
 
+// 867. Transpose Matrix
+// Easy
+// Given a 2D integer array matrix, return the transpose of matrix.
+// The transpose of a matrix is the matrix flipped over its main diagonal, switching the matrix's row and column indices.
+
 class Solution {
     /**
      * @param Integer[][] $matrix
      * @return Integer[][]
+     *
+     * beats 31% by execution time
+     * beats 33% by memory usage
      */
     function transpose(array $matrix): array {
         $arr = [[]];

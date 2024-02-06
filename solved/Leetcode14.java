@@ -1,3 +1,9 @@
+/*
+14. Longest Common Prefix
+Easy
+Write a function to find the longest common prefix string amongst an array of strings.
+If there is no common prefix, return an empty string "".
+*/
 public class Leetcode14 {
     public static void main(String[] args) {
         Solution14 sol = new Solution14();
@@ -21,6 +27,10 @@ public class Leetcode14 {
 }
 
 class Solution14 {
+    /*
+     * beats 99% by execution time
+     * beats 74% by memory usage
+     */
     public String longestCommonPrefix(String[] strs) {
         StringBuilder prefix = new StringBuilder();
         int pivot = 0;

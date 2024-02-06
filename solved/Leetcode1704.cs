@@ -1,4 +1,16 @@
+/*
+1704. Determine if String Halves Are Alike
+Easy
+
+You are given a string s of even length. Split this string into two halves of equal lengths, and let a be the first half and b be the second half.
+Two strings are alike if they have the same number of vowels ('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'). Notice that s contains uppercase and lowercase letters.
+Return true if a and b are alike. Otherwise, return false.
+*/
 public class Solution {
+    /*
+     * beats 34% by execution time
+     * beats 89% by memory usage
+     */
     public bool HalvesAreAlike(string s) {
         int slenhalf = s.Length / 2;
         int count = 0;

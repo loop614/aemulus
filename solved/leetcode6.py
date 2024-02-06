@@ -1,4 +1,8 @@
+# 6. Zigzag Conversion
+# Medium
 class Solution:
+    # beats 5% by execution time
+    # beats 8% by memory usage
     def convert(self, s: str, numRows: int) -> str:
         matx = [[] for _ in range(numRows)]
         res = ""

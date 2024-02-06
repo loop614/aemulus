@@ -1,32 +1,44 @@
+/*
+1582. Special Positions in a Binary Matrix
+Easy
+
+Given an m x n binary matrix mat, return the number of special positions in mat.
+A position (i, j) is called special if mat[i][j] == 1 and all other elements in row i and column j are 0 (rows and columns are 0-indexed).
+*/
+
 import java.util.Arrays;
 
-// public class Main {
-//     public static void main(String[] args) {
-//         Solution sol = new Solution();
-//         int output;
-//         output = sol.numSpecial(new int[][]{{1,0,0},{0,0,1},{1,0,0}});
-//         System.out.println(output);
-//         System.out.println(output == 1);
-//         output = sol.numSpecial(new int[][]{{1,0,0},{0,1,0},{0,0,1}});
-//         System.out.println(output);
-//         System.out.println(output == 3);
-//         output = sol.numSpecial(new int[][]{{1,0},{0,1},{1,0}});
-//         System.out.println(output);
-//         System.out.println(output == 1);
-//         output = sol.numSpecial(new int[][]{{0,0,1,0},{0,0,0,0},{0,0,0,0},{0,1,0,0}});
-//         System.out.println(output);
-//         System.out.println(output == 2);
-//         output = sol.numSpecial(new int[][]{{0,0,0,1},{1,0,0,0},{0,1,1,0},{0,0,0,0}});
-//         System.out.println(output);
-//         System.out.println(output == 2);
-//         output = sol.numSpecial(new int[][]{{0,0,0,0,0,1,0,0},{0,0,0,0,1,0,0,1},{0,0,0,0,1,0,0,0},{1,0,0,0,1,0,0,0},{0,0,1,1,0,0,0,0}});
-//         System.out.println(output);
-//         System.out.println(output == 1);
-//     }
-// }
+public class Leetcode1582 {
+    public static void main(String[] args) {
+        Solution sol = new Solution();
+        int output;
+        output = sol.numSpecial(new int[][]{{1,0,0},{0,0,1},{1,0,0}});
+        System.out.println(output);
+        System.out.println(output == 1);
+        output = sol.numSpecial(new int[][]{{1,0,0},{0,1,0},{0,0,1}});
+        System.out.println(output);
+        System.out.println(output == 3);
+        output = sol.numSpecial(new int[][]{{1,0},{0,1},{1,0}});
+        System.out.println(output);
+        System.out.println(output == 1);
+        output = sol.numSpecial(new int[][]{{0,0,1,0},{0,0,0,0},{0,0,0,0},{0,1,0,0}});
+        System.out.println(output);
+        System.out.println(output == 2);
+        output = sol.numSpecial(new int[][]{{0,0,0,1},{1,0,0,0},{0,1,1,0},{0,0,0,0}});
+        System.out.println(output);
+        System.out.println(output == 2);
+        output = sol.numSpecial(new int[][]{{0,0,0,0,0,1,0,0},{0,0,0,0,1,0,0,1},{0,0,0,0,1,0,0,0},{1,0,0,0,1,0,0,0},{0,0,1,1,0,0,0,0}});
+        System.out.println(output);
+        System.out.println(output == 1);
+    }
+}
 
 
 class Solution1582 {
+    /*
+     * beats 76% by execution time
+     * beats 37% by memory usage
+     */
     public int numSpecial(int[][] nums) {
         int specialCount = 0;
         boolean isSpecial = false;

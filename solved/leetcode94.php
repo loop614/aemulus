@@ -1,3 +1,9 @@
+<!--
+94. Binary Tree Inorder Traversal
+Easy
+Given the root of a binary tree, return the inorder traversal of its nodes' values.
+-->
+
 <?php
 class TreeNode {
     public $val = null;
@@ -27,6 +33,9 @@ class Solution {
     /**
      * @param TreeNode|null $root
      * @return Integer[]
+     *
+     * beats 86% by execution time
+     * beats 96% by memory usage
      */
     function inorderTraversal(?TreeNode $root): array {
         if ($root === null) {

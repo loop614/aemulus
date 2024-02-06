@@ -1,22 +1,38 @@
 import java.util.Arrays;
 
-// public class Main {
-//     public static void main(String[] args) {
-//         Solution sol = new Solution();
-//         int[][] output;
+/*
+2482. Difference Between Ones and Zeros in Row and Column
+Medium
 
-//         output = sol.onesMinusZeros(new int[][]{{0,1,1},{1,0,1},{0,0,1}});
-//         System.out.println(sol.printMatrix(output));
-//         System.out.println(sol.areMatricesEqual(output, new int[][]{{0,0,4},{0,0,4},{-2,-2,2}}));
+You are given a 0-indexed m x n binary matrix grid.
+A 0-indexed m x n difference matrix diff is created with the following procedure:
+    Let the number of ones in the ith row be onesRowi.
+    Let the number of ones in the jth column be onesColj.
+    Let the number of zeros in the ith row be zerosRowi.
+    Let the number of zeros in the jth column be zerosColj.
+    diff[i][j] = onesRowi + onesColj - zerosRowi - zerosColj
+Return the difference matrix diff.
+*/
+public class Leetcode2482 {
+    public static void main(String[] args) {
+        Solution sol = new Solution();
+        int[][] output;
 
-//         output = sol.onesMinusZeros(new int[][]{{1,1,1},{1,1,1}});
-//         System.out.println(sol.printMatrix(output));
-//         System.out.println(sol.areMatricesEqual(output, new int[][]{{5,5,5},{5,5,5}}));
-//     }
-// }
+        output = sol.onesMinusZeros(new int[][]{{0,1,1},{1,0,1},{0,0,1}});
+        System.out.println(sol.printMatrix(output));
+        System.out.println(sol.areMatricesEqual(output, new int[][]{{0,0,4},{0,0,4},{-2,-2,2}}));
 
+        output = sol.onesMinusZeros(new int[][]{{1,1,1},{1,1,1}});
+        System.out.println(sol.printMatrix(output));
+        System.out.println(sol.areMatricesEqual(output, new int[][]{{5,5,5},{5,5,5}}));
+    }
+}
 
 class Solution2482 {
+    /*
+     * beats 14% by execution time
+     * beats 23% by memory usage
+     */
     public int[][] onesMinusZeros(int[][] nums) {
         int[][] res = new int[nums.length][nums[0].length];
         int[] zeroRows = new int[nums.length];
