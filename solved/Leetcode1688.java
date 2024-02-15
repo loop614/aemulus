@@ -8,7 +8,7 @@ Return the number of matches played in the tournament until a winner is decided.
 */
 public class Leetcode1688 {
     public static void main(String[] args) {
-        int sol = new Solution().numberOfMatches(14);
+        int sol = new Solution1688().numberOfMatches(14);
         System.out.println(sol);
     }
 }

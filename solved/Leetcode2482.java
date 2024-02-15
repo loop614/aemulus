@@ -15,7 +15,7 @@ Return the difference matrix diff.
 */
 public class Leetcode2482 {
     public static void main(String[] args) {
-        Solution sol = new Solution();
+        Solution2482 sol = new Solution2482();
         int[][] output;
 
         output = sol.onesMinusZeros(new int[][]{{0,1,1},{1,0,1},{0,0,1}});

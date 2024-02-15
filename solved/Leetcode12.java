@@ -24,7 +24,7 @@ Given an integer, convert it to a roman numeral.
 */
 public class Leetcode12 {
     public static void main(String[] args) {
-        Solution sol = new Solution();
+        Solution12 sol = new Solution12();
         String output;
         output = sol.intToRoman(1);
         System.out.println(output);
@@ -47,8 +47,7 @@ public class Leetcode12 {
     }
 }
 
-
-class Solution {
+class Solution12 {
     /*
      * beats 98% by execution time
      * beats 98% by memory usage

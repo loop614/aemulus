@@ -1,16 +1,14 @@
 /*
 1582. Special Positions in a Binary Matrix
 Easy
-
 Given an m x n binary matrix mat, return the number of special positions in mat.
 A position (i, j) is called special if mat[i][j] == 1 and all other elements in row i and column j are 0 (rows and columns are 0-indexed).
 */
-
 import java.util.Arrays;
 
 public class Leetcode1582 {
     public static void main(String[] args) {
-        Solution sol = new Solution();
+        Solution1582 sol = new Solution1582();
         int output;
         output = sol.numSpecial(new int[][]{{1,0,0},{0,0,1},{1,0,0}});
         System.out.println(output);

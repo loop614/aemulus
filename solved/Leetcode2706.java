@@ -9,7 +9,7 @@ Return the amount of money you will have leftover after buying the two chocolate
 */
 public class Leetcode2706 {
     public static void main(String[] args) {
-        Solution sol = new Solution();
+        Solution2706 sol = new Solution2706();
         int output;
         output = sol.buyChoco(new int[]{1,2,2}, 3);
         System.out.println(output);
