@@ -2,5 +2,6 @@
 recycle/
 dotnetenv/
 javaenv/
+cppenv/
 main
 notes.txt
