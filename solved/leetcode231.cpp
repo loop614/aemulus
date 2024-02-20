@@ -14,10 +14,32 @@ using namespace std;
 class Solution {
 public:
     /*
-     * beats 60% by execution time
+     * beats 80% by execution time
      * beats 19% by memory usage
      */
     bool isPowerOfTwo(int n) {
+        vector<int> allNumbers = {1,2,4,8,16,32,64,128,256,512,1024,2048,4096,8192,16384,32768,65536,131072,262144,524288,1048576,2097152,4194304,8388608,16777216,33554432,67108864,134217728,268435456,536870912,1073741824};
+        int leftIndex = 0;
+        int rightIndex = allNumbers.size();
+        while (leftIndex < rightIndex) {
+            int index = (leftIndex+rightIndex) / 2;
+            if (n > allNumbers[index]) {
+                leftIndex = index + 1;
+            } else if (n == allNumbers[index]){
+                return true;
+            } else {
+                rightIndex = index;
+            }
+        }
+
+        return false;
+    }
+
+    /*
+     * beats 60% by execution time
+     * beats 19% by memory usage
+     */
+    bool isPowerOfTwoCalc(int n) {
         if (n > 1 && n & 1 == 1) {
             return false;
         }
