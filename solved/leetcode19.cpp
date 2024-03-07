@@ -3,9 +3,6 @@
 Medium
 Given the head of a linked list, remove the nth node from the end of the list and return its head
 */
-
-// (!) must remove all free cals for leetcode
-
 #include <iostream>
 
 using namespace std;
@@ -33,7 +30,6 @@ public:
         if (count < 1) {
             if (headCopy && headCopy->next) {
                 ListNode *temp = headCopy->next;
-                free(headCopy);
                 return temp;
             }
 
@@ -47,7 +43,6 @@ public:
             {
                 ListNode* temp = headCopy->next;
                 headCopy->next = headCopy->next->next;
-                free(temp);
                 break;
             }
             headCopy = headCopy->next;
