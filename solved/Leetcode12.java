@@ -48,10 +48,6 @@ public class Leetcode12 {
 }
 
 class Solution12 {
-    /*
-     * beats 98% by execution time
-     * beats 98% by memory usage
-     */
     public String intToRoman(int num) {
         StringBuilder sb = new StringBuilder();
         while (num >= 1000) {

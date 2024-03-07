@@ -46,10 +46,6 @@ public class Leetcode18 {
 }
 
 class Solution18 {
-    /**
-     * beats 14% by execution time
-     * beats 12% by memory usage
-     */
     public List<List<Integer>> fourSum(int[] nums, int target) {
         if (nums.length < 4) {
             return Arrays.asList();

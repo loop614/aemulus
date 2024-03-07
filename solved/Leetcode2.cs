@@ -15,10 +15,6 @@ public class ListNode {
 }
 
 public class Solution {
-    /*
-     * beats 88% by execution time
-     * beats 39% by memory usage
-     */
     public ListNode AddTwoNumbers(ListNode l1, ListNode l2) {
         ListNode current = new ListNode();
         ListNode solutionRoot = current;

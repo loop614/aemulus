@@ -44,10 +44,6 @@ public class Solution {
     }
 
     // overly safe, no garbage solution ( others returning root.next )
-    /*
-     * beats 48% by execution time
-     * beats 22% by memory usage
-     */
     public ListNode? MergeTwoLists(ListNode? list1, ListNode? list2) {
         ListNode? curr = null, root = null;
 
@@ -77,10 +73,6 @@ public class Solution {
     }
 
     // unsafe
-    /*
-     * beats 56% by execution time
-     * beats 63% by memory usage
-     */
     public ListNode? MergeTwoLists2(ListNode list1, ListNode list2) {
         ListNode root = new(-1);
         ListNode curr = root;

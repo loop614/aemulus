@@ -74,10 +74,6 @@ class Solution1464 {
         return (int) max;
     }
 
-    /*
-     * beats 68% by execution time
-     * beats 25% by memory usage
-     */
     public int maxProduct1(int[] nums) {
         int nlen = nums.length - 1;
         Quick q1 = new Quick();

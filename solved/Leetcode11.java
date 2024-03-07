@@ -21,10 +21,6 @@ public class Leetcode11 {
 }
 
 class Solution11 {
-    /*
-     * beats 89% by execution time
-     * beats 5% by memory usage
-     */
     public int maxArea(int[] height) {
         int maxArea = 0;
         int currArea;

@@ -3,7 +3,6 @@
 You are given an n x n 2D matrix representing an image, rotate the image by 90 degrees (clockwise).
 You have to rotate the image in-place, which means you have to modify the input 2D matrix directly. DO NOT allocate another 2D matrix and do the rotation.
 */
-
 public class Solution {
     private (int, int) Minus90(int i, int j, int count)
     {
@@ -33,10 +32,6 @@ public class Solution {
         return (j, count - 1 - i);
     }
 
-    /*
-     * beats 58% by execution time
-     * beats 46% by memory usage
-     */
     public void RotateUsingRotates(int[][] matrix) {
         int colCount = matrix[0].Length;
         int rowCount = matrix.Length;
@@ -58,10 +53,6 @@ public class Solution {
         }
     }
 
-    /*
-     * beats 51% by execution time
-     * beats 69% by memory usage
-     */
     public void RotateWithHelperMatrix(int[][] matrix) {
         int colCount = matrix[0].Length;
         int rowCount = matrix.Length;
@@ -83,10 +74,6 @@ public class Solution {
         }
     }
 
-    /*
-     * beats 76% by execution time
-     * beats 9% by memory usage
-     */
     public void Rotate(int[][] matrix) {
         int colCount = matrix[0].Length;
         int rowCount = matrix.Length;

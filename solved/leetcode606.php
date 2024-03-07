@@ -50,9 +50,6 @@ class Solution {
     /**
      * @param TreeNode $root
      * @return String
-     *
-     * beats 98% by execution time
-     * beats 12% by memory usage
      */
     function tree2str(TreeNode $root): String {
         $letters = [];

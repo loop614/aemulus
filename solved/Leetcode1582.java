@@ -33,10 +33,6 @@ public class Leetcode1582 {
 
 
 class Solution1582 {
-    /*
-     * beats 76% by execution time
-     * beats 37% by memory usage
-     */
     public int numSpecial(int[][] nums) {
         int specialCount = 0;
         boolean isSpecial = false;

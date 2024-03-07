@@ -68,10 +68,6 @@ class Solution {
         return res;
     }
 
-    /*
-     * beats 52% by execution time
-     * beats 80% by memory usage
-     */
     public IList<IList<int>> FindWinners(int[][] matches) {
         List<IList<int>> res = [];
         List<int> winners = [];

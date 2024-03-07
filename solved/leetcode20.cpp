@@ -17,10 +17,6 @@ using namespace std;
 
 class Solution {
 public:
-    /**
-     * beats 100% by execution time
-     * beats 55% by memory usage
-     */
     bool isValid(string s) {
         vector<char> a;
         char last;

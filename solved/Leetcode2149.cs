@@ -9,10 +9,6 @@ You should rearrange the elements of nums such that the modified array follows t
 Return the modified array after rearranging the elements to satisfy the aforementioned conditions.
 */
 public class Solution {
-    /*
-     * beats 86% by execution time
-     * beats 20% by memory usage
-     */
     public int[] RearrangeArray(int[] nums) {
         Queue<int> negatives = new();
         Queue<int> positives = new();
@@ -56,10 +52,6 @@ public class Solution {
         return res;
     }
 
-    /*
-     * beats 92% by execution time
-     * beats 57% by memory usage
-     */
     public int[] RearrangeArrayUsingArray(int[] nums) {
         int[] negatives = new int[nums.Length];
         int[] positives = new int[nums.Length];
@@ -109,10 +101,6 @@ public class Solution {
         return nums;
     }
 
-    /*
-     * beats 85% by execution time
-     * beats 14% by memory usage
-     */
     public int[] RearrangeArrayUsingList(int[] nums) {
         List<int> negatives = [];
         List<int> positives = [];

@@ -25,9 +25,6 @@ var twoSum2 = function (nums, target) {
  * @param {number[]} nums
  * @param {number} target
  * @return {number[]}
- *
- * beats 81% by execution time
- * beats 40% by memory usage
  */
 var twoSum = function (nums, target) {
     let beforeDiff = {};

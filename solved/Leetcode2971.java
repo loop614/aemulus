@@ -43,10 +43,6 @@ public class Leetcode2971 {
 }
 
 class Solution2971 {
-    /*
-     * beats 98% by execution time
-     * beats 72% by memory usage
-     */
     public long largestPerimeter(int[] nums) {
         Arrays.sort(nums);
         long curPerimiter;

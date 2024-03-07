@@ -10,9 +10,6 @@ class Solution {
     /**
      * @param String[][] $paths
      * @return String
-     *
-     * beats 85% by execution time
-     * beats 48% by memory usage
      */
     function destCity(array $paths): string {
         $left = [];

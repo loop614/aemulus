@@ -12,10 +12,6 @@ using namespace std;
 
 class Solution {
 public:
-    /*
-     * beats 89% by execution time
-     * beats 46% by memory usage
-     */
     vector<int> twoSum(vector<int>& nums, int target) {
         std::unordered_map<int,int> table;
         for(int i=0;i<nums.size();i++){

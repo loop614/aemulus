@@ -46,10 +46,6 @@ class Solution242 {
     }
 
     // best java sol
-    /*
-     * beats 84% by execution time
-     * beats 45% by memory usage
-     */
     public boolean isAnagram2(String s, String t) {
         if (s.length() != t.length()) {
             return false;

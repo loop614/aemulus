@@ -27,10 +27,6 @@ public class Leetcode14 {
 }
 
 class Solution14 {
-    /*
-     * beats 99% by execution time
-     * beats 74% by memory usage
-     */
     public String longestCommonPrefix(String[] strs) {
         StringBuilder prefix = new StringBuilder();
         int pivot = 0;

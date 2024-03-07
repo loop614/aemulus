@@ -32,10 +32,6 @@ public class Leetcode15 {
 }
 
 class Solution15 {
-    /*
-     * beats 28% by execution time
-     * beats 17% by memory usage
-     */
     public List<List<Integer>> threeSum(int[] nums) {
         HashSet<List<Integer>> res = new HashSet<>();
         Arrays.sort(nums);

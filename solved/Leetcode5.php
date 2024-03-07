@@ -10,9 +10,6 @@ class Solution {
     /**
      * @param string $s
      * @return string
-     *
-     * beats 50% by execution time
-     * beats 97% by memory usage
      */
     function longestPalindrome(string $s) {
         $longest = "";

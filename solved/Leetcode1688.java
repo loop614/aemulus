@@ -24,10 +24,6 @@ class Solution1688 {
         return this.spinAround((n - 1) / 2 + 1, numberOfMatchesPlayed + (n - 1) / 2);
     }
 
-    /*
-     * beats 100% by execution time
-     * beats 69% by memory usage
-     */
     public int numberOfMatches(int n) {
          return this.spinAround(n, 0);
     }

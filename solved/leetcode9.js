@@ -7,10 +7,6 @@ function numDigits(x) {
     return Math.max(Math.floor(Math.log10(Math.abs(x))), 0) + 1;
 }
 
-/**
- * beats 96% by execution time
- * beats 94% by memory usage
- */
 function isPalindrome(x) {
     if (x < 0) return false;
 

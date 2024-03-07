@@ -33,9 +33,6 @@ class Solution {
     /**
      * @param TreeNode|null $root
      * @return Integer[]
-     *
-     * beats 86% by execution time
-     * beats 96% by memory usage
      */
     function inorderTraversal(?TreeNode $root): array {
         if ($root === null) {

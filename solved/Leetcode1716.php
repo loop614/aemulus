@@ -11,9 +11,6 @@ class Solution {
     /**
      * @param Integer $n
      * @return Integer
-     *
-     * beats 74% by execution time
-     * beats 37% by memory usage
      */
     function totalMoney($n) {
         $monday = 1;

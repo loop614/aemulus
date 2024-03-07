@@ -21,10 +21,6 @@ public class Leetcode1287 {
 }
 
 class Solution1287 {
-    /*
-     * beats 100% by execution time
-     * beats 80% by memory usage
-     */
     public int findSpecialInteger(int[] arr) {
         int prev = arr[0];
         int occ = 0;

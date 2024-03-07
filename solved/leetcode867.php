@@ -9,9 +9,6 @@ class Solution {
     /**
      * @param Integer[][] $matrix
      * @return Integer[][]
-     *
-     * beats 31% by execution time
-     * beats 33% by memory usage
      */
     function transpose(array $matrix): array {
         $arr = [[]];

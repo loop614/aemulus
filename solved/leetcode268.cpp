@@ -11,10 +11,6 @@ using namespace std;
 
 class Solution {
 public:
-    /*
-     * beats 85% by execution time
-     * beats 33% by memory usage
-     */
     int missingNumber(vector<int>& nums) {
         int sum = 0;
         int max = 0;
@@ -32,10 +28,6 @@ public:
         return max-sum;
     }
 
-    /*
-     * beats 25% by execution time
-     * beats 14% by memory usage
-     */
     int missingNumberNaive(vector<int>& nums) {
         sort(nums.begin(), nums.end());
         unsigned int i;

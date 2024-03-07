@@ -19,12 +19,7 @@ for (int i = 0; i < actualLength; i++) {
 }
 If all assertions pass, then your solution will be accepted.
 */
-
 class Solution27 {
-    /*
-     * beats 100% by execution time
-     * beats 95% by memory usage
-     */
     public int removeElement(int[] nums, int val) {
         int count = 0;
         for (int i = 0; i < nums.length; i++) {

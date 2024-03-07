@@ -7,10 +7,6 @@ Return the quotient after dividing dividend by divisor.
 Note: Assume we are dealing with an environment that could only store integers within the 32-bit signed integer range: [−2^31, 2^31 − 1]. For this problem, if the quotient is strictly greater than 2^31 - 1, then return 2^31 - 1, and if the quotient is strictly less than -2^31, then return -2^31.
 */
 public class Solution {
-    /*
-     * beats 24% by execution time (128 ms)
-     * beats 9% by memory usage
-     */
     public int Divide(int dividend, int divisor) {
         if (dividend == 0) { return 0; }
         if (divisor == 1) { return dividend; }
@@ -50,10 +46,6 @@ public class Solution {
         return res;
     }
 
-    /*
-     * beats 24% by execution time (165 ms)
-     * beats 9% by memory usage
-     */
     public int Divide2(int dividend, int divisor) {
         if (dividend == 0) { return 0; }
         else if (divisor == 1) { return dividend; }

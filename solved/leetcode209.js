@@ -38,9 +38,6 @@ let minSubArrayLenWalking = function (target, nums) {
  * @param {number} target
  * @param {number[]} nums
  * @return {number}
- *
- * beats 34% by execution time
- * beats 99% by memory usage
  */
 let minSubArrayLenDoubleFor = function (target, nums) {
     let curSum = 0;

@@ -25,9 +25,6 @@ function sudoCmp(inputArray) {
 /**
  * @param {string[][]} board
  * @return {boolean}
- *
- * beats 58% by execution time
- * beats 38% by memory usage
  */
 var isValidSudoku = function (board) {
     let tempArray = [];

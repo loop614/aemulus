@@ -45,10 +45,6 @@ func removeDuplicates2(nums []int) int {
 	return len(uniques)
 }
 
-/*
-* beats 100% by execution time
-* beats 78% by memory usage
-*/
 func removeDuplicates(nums []int) int {
 	var pivot int = 1
 

@@ -13,10 +13,6 @@ import (
 	"strings"
 )
 
-/*
-* beats 74% by execution time
-* beats 96% by memory usage
-*/
 func maxScore(s string) int {
 	var scorecount int = 0
 	var maxsum int = 0

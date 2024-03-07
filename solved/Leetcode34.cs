@@ -6,10 +6,6 @@ If target is not found in the array, return [-1, -1].
 You must write an algorithm with O(log n) runtime complexity.
 */
 public class Solution {
-    /*
-     * beats 87% by execution time
-     * beats 45% by memory usage
-     */
     public int[] SearchRange(int[] nums, int target) {
         if (nums.Length == 0) {
             return [-1, -1];

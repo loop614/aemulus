@@ -44,10 +44,6 @@ class Solution1624 {
         return max;
     }
 
-    /*
-     * beats 100% by execution time
-     * beats 88% by memory usage
-     */
     public int maxLengthBetweenEqualCharacters(String s) {
         int slen = s.length();
         if (slen < 3) {

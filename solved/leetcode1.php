@@ -13,9 +13,6 @@ class Solution {
  * @param Integer $target
  *
  * @return Integer[]
- *
- * beats 72% by execution time
- * beats 89% by memory usage
  */
 function twoSum($nums, $target): array {
     $table = [];

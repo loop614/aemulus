@@ -11,10 +11,6 @@ using namespace std;
 
 class Solution {
 public:
-    /*
-     * beats 44% by execution time
-     * beats 68% by memory usage
-     */
     int strStr(string haystack, string needle) {
         bool same;
         int pos = -1;

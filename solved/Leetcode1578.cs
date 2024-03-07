@@ -7,10 +7,6 @@ Return the minimum time Bob needs to make the rope colorful.
 */
 public class Solution
 {
-    /*
-     * beats 43% by execution time
-     * beats 25% by memory usage
-     */
     public int MinCost(string colors, int[] neededTime)
     {
         int costSum = 0;

@@ -5,10 +5,6 @@ Given a string containing digits from 2-9 inclusive, return all possible letter 
 A mapping of digits to letters (just like on the telephone buttons) is given below. Note that 1 does not map to any letters.
 */
 public class Solution {
-    /**
-     * beats 97% by execution time
-     * beats 31% by memory usage
-     */
     public IList<string> LetterCombinations(string digits) {
         if (digits.Length == 0) {
             return new List<string>();

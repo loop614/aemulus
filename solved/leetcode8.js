@@ -15,9 +15,6 @@
 /**
  * @param {string} s
  * @return {number}
- *
- * beats 45% by execution time
- * beats 77% by memory usage
  */
 var myAtoi = function(s) {
     let cleanS = "";

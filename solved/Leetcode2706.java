@@ -28,10 +28,6 @@ public class Leetcode2706 {
 
 
 class Solution2706 {
-    /*
-     * beats 100% by execution time
-     * beats 63% by memory usage
-     */
     public int buyChoco(int[] nums, int money) {
         int minVal = 101, minVal2 = 101, exMinVal = 101;
         for(int i = 0; i < nums.length; i++) {

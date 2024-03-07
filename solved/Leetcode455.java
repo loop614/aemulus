@@ -27,10 +27,6 @@ public class Leetcode455 {
 
 
 class Solution455 {
-    /*
-     * beats 99% by execution time
-     * beats 66% by memory usage
-     */
     public int findContentChildren(int[] g, int[] s) {
         Arrays.sort(g);
         Arrays.sort(s);

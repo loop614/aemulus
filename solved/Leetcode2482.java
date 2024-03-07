@@ -29,10 +29,6 @@ public class Leetcode2482 {
 }
 
 class Solution2482 {
-    /*
-     * beats 14% by execution time
-     * beats 23% by memory usage
-     */
     public int[][] onesMinusZeros(int[][] nums) {
         int[][] res = new int[nums.length][nums[0].length];
         int[] zeroRows = new int[nums.length];

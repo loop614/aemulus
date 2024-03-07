@@ -14,10 +14,6 @@ public class ListNode {
 }
 
 public class Solution {
-    /*
-     * beats 30% by execution time
-     * beats 38% by memory usage
-     */
     public ListNode MergeKLists(ListNode[] lists) {
         bool sbreak = true;
         for (int i = 0; i < lists.Length; i++) {

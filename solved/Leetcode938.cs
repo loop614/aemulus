@@ -3,7 +3,6 @@
 Easy
 Given the root node of a binary search tree and two integers low and high, return the sum of values of all nodes with a value in the inclusive range [low, high].
 */
-
 public class TreeNode {
     public int val;
     public TreeNode left;
@@ -36,10 +35,6 @@ public class Solution {
         return count;
     }
 
-    /*
-     * beats 92% by execution time
-     * beats 70% by memory usage
-     */
     public int RangeSumBST(TreeNode root, int low, int high) {
         int count = 0;
         Stack<TreeNode> sta = new();

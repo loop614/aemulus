@@ -20,10 +20,6 @@ struct ListNode {
 
 class Solution {
 public:
-    /**
-     * beats 100% by execution time
-     * beats 54% by memory usage
-     */
     ListNode* removeNthFromEnd(ListNode* head, int n) {
         ListNode* root = head;
         ListNode* headCopy = head;

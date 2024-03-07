@@ -11,10 +11,6 @@ using namespace std;
 
 class Solution {
 public:
-    /*
-     * beats 100% by execution time
-     * beats 51% by memory usage
-     */
     bool halvesAreAlike(string s) {
         int slenhalf = s.length() / 2;
         int count = 0;

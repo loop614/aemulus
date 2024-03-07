@@ -14,10 +14,6 @@ import (
 	"sort"
 )
 
-/*
-* beats 93% by execution time
-* beats 73% by memory usage
-*/
 func maxWidthOfVerticalArea(points [][]int) int {
 	var firstMembers []int
 	pointsLen := len(points)

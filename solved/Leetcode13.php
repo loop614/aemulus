@@ -28,10 +28,6 @@ class Solution {
     /**
     * @param String $s
     * @return Integer
-    *
-    * beats 80% by execution time
-    * beats 77% by memory usage
-    *
     */
     function romanToInt(string $s) {
         $order = ['M', 'D', 'C', 'L', 'X', 'V', 'I'];

@@ -34,10 +34,6 @@ public class Solution {
         return median;
     }
 
-    /*
-     * beats 89% by execution time
-     * beats 67% by memory usage
-     */
     public double FindMedianSortedArrays(int[] nums1, int[] nums2) {
         int[] combine = new int[nums1.Length + nums2.Length];
         int i = 0, j = 0, k = 0;

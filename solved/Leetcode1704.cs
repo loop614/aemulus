@@ -7,10 +7,6 @@ Two strings are alike if they have the same number of vowels ('a', 'e', 'i', 'o'
 Return true if a and b are alike. Otherwise, return false.
 */
 public class Solution {
-    /*
-     * beats 34% by execution time
-     * beats 89% by memory usage
-     */
     public bool HalvesAreAlike(string s) {
         int slenhalf = s.Length / 2;
         int count = 0;

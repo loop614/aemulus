@@ -18,10 +18,6 @@ public class Solution {
         return false;
     }
 
-    /*
-     * beats 99% by execution time
-     * beats 72% by memory usage
-     */
     public bool IsPowerOfThree(int n) {
         if (n == 0) {
             return false;
