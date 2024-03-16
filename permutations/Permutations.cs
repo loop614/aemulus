@@ -50,7 +50,7 @@ public class Solution
 
         while (pivot < fac)
         {
-            gretestMobileIndex = GetGreatestMobileNumberAndUpdateMobilities(nis);
+            gretestMobileIndex = GetGreatestMobileIndexAndUpdateMobilities(nis);
             if (nis[gretestMobileIndex].directionLeft)
             {
                 (nis[gretestMobileIndex - 1], nis[gretestMobileIndex]) = (nis[gretestMobileIndex], nis[gretestMobileIndex - 1]);
@@ -73,13 +73,13 @@ public class Solution
         return res;
     }
 
-    private int GetGreatestMobileNumberAndUpdateMobilities(NumberInfo[] nis)
+    private int GetGreatestMobileIndexAndUpdateMobilities(NumberInfo[] nis)
     {
         int gretestMobileIndex = -1;
         int gretestMobileValue = int.MinValue;
 
         nis[0].isMobile = !nis[0].directionLeft && nis[0] > nis[1];
-        if (nis[0].isMobile && gretestMobileValue < nis[0].value)
+        if (nis[0].isMobile)
         {
             gretestMobileIndex = 0;
             gretestMobileValue = nis[0].value;
@@ -94,6 +94,7 @@ public class Solution
                 gretestMobileValue = nis[i].value;
             }
         }
+
         nis[^1].isMobile = nis[^1].directionLeft && nis[^1] > nis[^2];
         if (nis[^1].isMobile && gretestMobileValue < nis[^1].value)
         {
@@ -126,8 +127,7 @@ public class Solution
 }
 
 Solution sol = new Solution();
-int[][] res;
-res = sol.PermutationsJohnsonTrotter(1, 2, 3, 4);
+int[][] res = sol.PermutationsJohnsonTrotter(1, 2, 3);
 foreach (int[] one in res)
 {
     Console.WriteLine(string.Join(", ", one));
