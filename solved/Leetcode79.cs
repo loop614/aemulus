@@ -5,6 +5,8 @@ Given an m x n grid of characters board and a string word, return true if word e
 The word can be constructed from letters of sequentially adjacent cells, where adjacent cells are horizontally or vertically neighboring. The same letter cell may not be used more than once.
 ToDo: Style, try recursion
 */
+#nullable enable
+
 class Point : IEquatable<Point>
 {
     public int i;
@@ -77,28 +79,26 @@ public class Solution
         {
             for (int i = 0; i < board.Length; i++)
             {
-                if (board[i][j] == word[pivot])
+                if (board[i][j] == word[0])
                 {
+                    pivot = 0;
                     LoopState first = new(word.Length);
                     first.path[pivot] = new Point(i, j);
                     first.tempi = i;
                     first.tempj = j;
                     first.pivot = 1;
                     que.Enqueue(first);
-
                     int queLevelCount = 1;
-
 
                     while (que.Count > 0)
                     {
+                        queLevelCount = que.Count;
                         while (queLevelCount-- > 0)
                         {
                             LoopState curr = que.Dequeue();
-                            bool lastletter = curr.pivot + 1 == word.Length;
-
                             if (curr.tempi - 1 >= 0 && board[curr.tempi - 1][curr.tempj] == word[curr.pivot] && !Array.Exists<Point>(curr.path, element => element is not null && element.i == curr.tempi - 1 && element.j == curr.tempj))
                             {
-                                if (lastletter) { return true; }
+                                if (curr.pivot + 1 == word.Length) { return true; }
                                 Point[] temp = new Point[word.Length];
                                 Array.Copy(curr.path, 0, temp, 0, curr.pivot + 1);
                                 temp[curr.pivot] = new Point(curr.tempi - 1, curr.tempj);
@@ -107,7 +107,7 @@ public class Solution
 
                             if (curr.tempj - 1 >= 0 && board[curr.tempi][curr.tempj - 1] == word[curr.pivot] && !Array.Exists<Point>(curr.path, element => element is not null && element.i == curr.tempi && element.j == curr.tempj - 1))
                             {
-                                if (lastletter) { return true; }
+                                if (curr.pivot + 1 == word.Length) { return true; }
                                 Point[] temp = new Point[word.Length];
                                 Array.Copy(curr.path, 0, temp, 0, curr.pivot + 1);
                                 temp[curr.pivot] = new Point(curr.tempi, curr.tempj - 1);
@@ -116,7 +116,7 @@ public class Solution
 
                             if (curr.tempj + 1 < board[curr.tempi].Length && board[curr.tempi][curr.tempj + 1] == word[curr.pivot] && !Array.Exists<Point>(curr.path, element => element is not null && element.i == curr.tempi && element.j == curr.tempj + 1))
                             {
-                                if (lastletter) { return true; }
+                                if (curr.pivot + 1 == word.Length) { return true; }
                                 Point[] temp = new Point[word.Length];
                                 Array.Copy(curr.path, 0, temp, 0, curr.pivot + 1);
                                 temp[curr.pivot] = new Point(curr.tempi, curr.tempj + 1);
@@ -125,17 +125,15 @@ public class Solution
 
                             if (curr.tempi + 1 < board.Length && board[curr.tempi + 1][curr.tempj] == word[curr.pivot] && !Array.Exists<Point>(curr.path, element => element is not null && element.i == curr.tempi + 1 && element.j == curr.tempj))
                             {
-                                if (lastletter) { return true; }
+                                if (curr.pivot + 1 == word.Length) { return true; }
                                 Point[] temp = new Point[word.Length];
                                 Array.Copy(curr.path, 0, temp, 0, curr.pivot + 1);
                                 temp[curr.pivot] = new Point(curr.tempi + 1, curr.tempj);
                                 que.Enqueue(new LoopState(temp, curr.tempi + 1, curr.tempj, curr.pivot + 1));
                             }
                         }
-                        queLevelCount = que.Count;
                     }
                 }
-                pivot = 0;
             }
         }
 
