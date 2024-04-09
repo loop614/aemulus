@@ -24,27 +24,27 @@ public class AemLinkedList {
 }
 
 class LinkedList<T> {
-    private ListNode<T> root = null;
-    private ListNode<T> last = null;
+    private ListNodeAe<T> root = null;
+    private ListNodeAe<T> last = null;
     private int count = 0;
 
     public void PushBack(T newMemeber) {
         if (root == null) {
-            root = new ListNode<T>();
+            root = new ListNodeAe<T>();
             last = root;
             last.val = newMemeber;
             count = 1;
             return;
         }
-        last.next = new ListNode<T>();
+        last.next = new ListNodeAe<T>();
         last = last.next;
         last.val = newMemeber;
         count++;
     }
 
     public void PushFront(T newMemeber) {
-        ListNode<T> temp = root;
-        root = new ListNode<T>();
+        ListNodeAe<T> temp = root;
+        root = new ListNodeAe<T>();
         root.val = newMemeber;
         if (temp != null) {
             root.next = temp;
@@ -59,8 +59,8 @@ class LinkedList<T> {
     }
 
     public boolean DeleteIndex(int indexToDelete) {
-        ListNode<T> temp = root;
-        ListNode<T> prev = null;
+        ListNodeAe<T> temp = root;
+        ListNodeAe<T> prev = null;
         int index = 0;
         boolean removed = false;
         if (indexToDelete == 0 && count <= 1) {
@@ -95,7 +95,7 @@ class LinkedList<T> {
     }
 
     public void Print() {
-        ListNode<T> temp = root;
+        ListNodeAe<T> temp = root;
         while (temp != null) {
             System.out.println(temp.val);
             temp = temp.next;
@@ -103,9 +103,9 @@ class LinkedList<T> {
     }
 }
 
-class ListNode<T> {
+class ListNodeAe<T> {
     public T val;
-    public ListNode<T> next;
+    public ListNodeAe<T> next;
     public void SetVal(T val) {
         this.val = val;
     }
