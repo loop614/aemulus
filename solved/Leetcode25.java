@@ -156,19 +156,21 @@ class Solution {
         ListNode prevRight = null;
         ListNode prevLeft = null;
         ListNode futureHead = headCopy;
+        ListNode prevHead = headCopy;
         int stopCount = Math.min(rights.size(), lefts.size());
 
         while (leftPivot < lefts.size() && rightPivot < rights.size() && rightPivot >= 0 && stopCount-- > 0)  {
             left = lefts.get(leftPivot);
             right = rights.get(rightPivot);
-            prevRight = getPrevInList(futureHead, right);
-            prevLeft = getPrevInList(futureHead, left);
+            prevRight = getPrevInList(prevHead, right);
+            prevLeft = getPrevInList(prevHead, left);
 
             if (groupStart) {
                 groupStart = false;
                 if (futureHead == headCopy) {
                     futureHead = rights.get(rightPivot);
                 }
+                prevHead = rights.get(rightPivot);
             }
 
             System.out.println("swap " + left.val + "-" + right.val);
