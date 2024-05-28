@@ -26,12 +26,16 @@ public class Heaps
         i = 1;
         int n = nums.Length;
 
-        while (i < n) {
-            if (numsC[i] < i) {
-                if ((i & 1) == 0) {
+        while (i < n)
+        {
+            if (numsC[i] < i)
+            {
+                if ((i & 1) == 0)
+                {
                     (nums[0], nums[i]) = (nums[i], nums[0]);
                 }
-                else {
+                else
+                {
                     (nums[numsC[i]], nums[i]) = (nums[i], nums[numsC[i]]);
                 }
 
@@ -39,7 +43,9 @@ public class Heaps
                 pivot++;
                 numsC[i] += 1;
                 i = 1;
-            } else {
+            }
+            else
+            {
                 numsC[i] = 0;
                 i += 1;
             }

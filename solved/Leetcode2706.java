@@ -1,5 +1,3 @@
-import java.util.Arrays;
-
 /*
 2706. Buy Two Chocolates
 Easy
@@ -7,6 +5,8 @@ You are given an integer array prices representing the prices of various chocola
 You must buy exactly two chocolates in such a way that you still have some non-negative leftover money. You would like to minimize the sum of the prices of the two chocolates you buy.
 Return the amount of money you will have leftover after buying the two chocolates. If there is no way for you to buy two chocolates without ending up in debt, return money. Note that the leftover must be non-negative.
 */
+import java.util.Arrays;
+
 public class Leetcode2706 {
     public static void main(String[] args) {
         Solution2706 sol = new Solution2706();
@@ -26,7 +26,6 @@ public class Leetcode2706 {
     }
 }
 
-
 class Solution2706 {
     public int buyChoco(int[] nums, int money) {
         int minVal = 101, minVal2 = 101, exMinVal = 101;
@@ -43,9 +42,8 @@ class Solution2706 {
                 minVal2 = nums[i];
             }
         }
-        System.out.println(minVal);
-        System.out.println(minVal2);
         int sum = minVal + minVal2;
+
         return (money >= sum) ? money - sum : money;
     }
 
