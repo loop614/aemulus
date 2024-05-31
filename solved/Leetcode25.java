@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 public class Leetcode25 {
     public static void main(String... args) {
-        Solution sol = new Solution();
+        Solution25 sol = new Solution25();
         ListNode res;
         ListNode example;
 
@@ -104,7 +104,7 @@ class ListNode {
     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
 }
 
-class Solution {
+class Solution25 {
     public ListNode reverseKGroup(ListNode head, int k) {
         if (head == null || head.next == null) {
             return head;
