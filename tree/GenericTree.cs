@@ -29,16 +29,13 @@ class TreeNode
 
 class Solution
 {
-    private int CountLeafs(TreeNode root)
+    private void CountLeafs(TreeNode root, ref int count)
     {
-        int count = 0;
         count++;
         for (int i = 0; i < root.children.Count; i++)
         {
-            count += CountLeafs(root.children[i]);
+            CountLeafs(root.children[i], ref count);
         }
-
-        return count;
     }
 
     private void LevelOrderSpin(TreeNode root, int[] res, ref int pivot, Queue<TreeNode> currLevel, int levelWidth)
@@ -76,7 +73,8 @@ class Solution
 
     public int[] LevelOrderRecursive(TreeNode root)
     {
-        int resCount = CountLeafs(root);
+        int resCount = 0;
+        CountLeafs(root, ref resCount);
         int[] res = new int[resCount];
         Queue<TreeNode> currLevel = new();
         currLevel.Enqueue(root);
@@ -88,7 +86,8 @@ class Solution
 
     public int[] LevelOrder(TreeNode root)
     {
-        int resCount = CountLeafs(root);
+        int resCount = 0;
+        CountLeafs(root, ref resCount);
         int[] res = new int[resCount];
         int pivot = 0;
         bool runLoop = true;
@@ -167,7 +166,8 @@ class Solution
 
     public int[] PostOrderRecursive(TreeNode root)
     {
-        int resCount = CountLeafs(root);
+        int resCount = 0;
+        CountLeafs(root, ref resCount);
         int[] res = new int[resCount];
         int pivot = 0;
         PostOrderSpin(root, res, ref pivot);
