@@ -13,19 +13,19 @@ public class Leetcode56 {
 
         res = sol.merge(new int[][]{{1,4},{2,3}});
         printMatrix(res);
-        System.err.println(areMatricesEqual(res, new int[][] {{1,4}}));
+        System.out.println(areMatricesEqual(res, new int[][] {{1,4}}));
 
         res = sol.merge(new int[][]{{1,3},{2,6},{8,10},{15,18}});
         printMatrix(res);
-        System.err.println(areMatricesEqual(res, new int[][] {{1,6},{8,10},{15,18}}));
+        System.out.println(areMatricesEqual(res, new int[][] {{1,6},{8,10},{15,18}}));
 
         res = sol.merge(new int[][] {{1,4},{4,5}});
         printMatrix(res);
-        System.err.println(areMatricesEqual(res, new int[][] {{1,5}}));
+        System.out.println(areMatricesEqual(res, new int[][] {{1,5}}));
 
         res = sol.merge(new int[][] {{1,4}, {0,4}});
         printMatrix(res);
-        System.err.println(areMatricesEqual(res, new int[][] {{0,4}}));
+        System.out.println(areMatricesEqual(res, new int[][] {{0,4}}));
     }
 
     private static void printMatrix(int[][] a) {
