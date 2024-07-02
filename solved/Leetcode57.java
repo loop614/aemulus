@@ -68,7 +68,7 @@ class Solution57 {
         System.arraycopy(intervals, 0, res, 0, p);
         res[p] = newInterval;
         if (intervals.length - p > 0) {
-            System.arraycopy(intervals, p, res, p+1, intervals.length - p);
+            System.arraycopy(intervals, p, res, p + 1, intervals.length - p);
         }
 
         return merge(res, p - 1);
@@ -108,7 +108,7 @@ class Solution57 {
             int[] curr = new int[2];
             curr[0] = intervals[pivotInt][0];
             curr[1] = intervals[pivotInt][1];
-            while (pivotInt + 1 < intervals.length && intervals[pivotInt+1][0] <= curr[1]) {
+            while (pivotInt + 1 < intervals.length && intervals[pivotInt + 1][0] <= curr[1]) {
                 pivotInt++;
                 if (curr[1] < intervals[pivotInt][1]) {
                     curr[1] = intervals[pivotInt][1];
