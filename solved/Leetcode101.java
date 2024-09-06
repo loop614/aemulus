@@ -17,8 +17,8 @@ public class Leetcode101 {
         example.left.left = new TreeNode(4);
         example.left.right = new TreeNode(5);
         example.right = new TreeNode(3);
-        example.right.left = null;
-        example.right.right = new TreeNode(4);
+        example.right.right = null;
+        example.right.left = new TreeNode(5);
         System.out.println(sol.isSymmetric(example) == false);
 
         example = new TreeNode(1);
@@ -82,15 +82,46 @@ class Solution101 {
 
     public boolean isSymmetric(TreeNode root) {
         if (root.left != null && root.right != null && root.left.val == root.right.val) {
-            return isSymmetricRec(root.left, root.right, new Stack<>(), new Stack<>());
-        }
-        else if (root.left == null && root.right == null) {
+            return isSymmetricRec(root.left, root.right);
+        } else if (root.left == null && root.right == null) {
             return true;
         }
         return false;
     }
 
-    public boolean isSymmetricRec(TreeNode rootl, TreeNode rootr, Stack<TreeNode> leftBranch, Stack<TreeNode> rightBranch) {
+    public boolean isSymmetricRec(TreeNode rootl, TreeNode rootr) {
+        TreeNode leftCur = rootl;
+        TreeNode rightCur = rootr;
+        boolean res = true;
+
+        while (leftCur != null || rightCur != null) {
+            if (leftCur == null ^ rightCur == null || leftCur.val != rightCur.val) {
+                return false;
+            }
+
+            if (leftCur.right != null && rightCur.left != null && leftCur.right.val == rightCur.left.val) {
+                res &= isSymmetricRec(leftCur.right, rightCur.left);
+            } else if (leftCur.right != null || rightCur.left != null) {
+                return false;
+            }
+
+            leftCur = leftCur.left;
+            rightCur = rightCur.right;
+        }
+
+        return res;
+    }
+
+    public boolean isSymmetric2(TreeNode root) {
+        if (root.left != null && root.right != null && root.left.val == root.right.val) {
+            return isSymmetricRec2(root.left, root.right, new Stack<>(), new Stack<>());
+        } else if (root.left == null && root.right == null) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean isSymmetricRec2(TreeNode rootl, TreeNode rootr, Stack<TreeNode> leftBranch, Stack<TreeNode> rightBranch) {
         TreeNode leftCur = rootl;
         TreeNode rightCur = rootr;
 
@@ -98,11 +129,9 @@ class Solution101 {
             if (leftCur != null && rightCur != null && leftCur.val == rightCur.val) {
                 leftBranch.push(leftCur);
                 rightBranch.push(rightCur);
-            }
-            else if (leftCur == null && rightCur == null) {
+            } else if (leftCur == null && rightCur == null) {
                 break;
-            }
-            else {
+            } else {
                 return false;
             }
             leftCur = leftCur.left;
@@ -114,9 +143,8 @@ class Solution101 {
             rightCur = rightBranch.pop();
             if (leftCur.val == rightCur.val) {
                 if (leftCur.right != null && rightCur.left != null) {
-                    return isSymmetricRec(leftCur.right, rightCur.left, leftBranch, rightBranch);
-                }
-                else if (leftCur.right != null || rightCur.left != null) {
+                    return isSymmetricRec2(leftCur.right, rightCur.left, leftBranch, rightBranch);
+                } else if (leftCur.right != null || rightCur.left != null) {
                     return false;
                 }
             } else {
