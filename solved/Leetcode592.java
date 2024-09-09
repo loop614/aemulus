@@ -5,11 +5,22 @@ Given a string expression representing an expression of fraction addition and su
 The final result should be an irreducible fraction.
 If your final result is an integer, change it to the format of a fraction that has a denominator 1. So in this case, 2 should be converted to 2/1.
  */
+
+import java.util.HashMap;
+
 public class Leetcode592 {
 
     public static void main(String[] args) {
         Solution592 sol = new Solution592();
         String res;
+
+        res = sol.fractionAddition("1/3-1/2");
+        System.out.println(res);
+        System.out.println("-1/6".equals(res));
+
+        res = sol.fractionAddition("1/2-1/3");
+        System.out.println(res);
+        System.out.println("1/6".equals(res));
 
         res = sol.fractionAddition("7/16+1/16");
         System.out.println(res);
@@ -29,7 +40,7 @@ public class Leetcode592 {
 
         res = sol.fractionAddition("1/2-1/200");
         System.out.println(res);
-        System.out.println("99/20".equals(res));
+        System.out.println("99/200".equals(res));
 
         res = sol.fractionAddition("-1/2+1/2+1/3");
         System.out.println(res);
@@ -38,6 +49,8 @@ public class Leetcode592 {
 }
 
 class Solution592 {
+
+    private static HashMap<String, Integer> leastCommonMultipleCache = new HashMap<>();
 
     public String fractionAddition(String expression) {
         char[] exp = expression.toCharArray();
@@ -180,10 +193,24 @@ class Solution592 {
     }
 
     private int leastCommonMultiple(int l, int r) {
-        if (l % r == 0) {
+        boolean biggerl = false;
+        if (l == r) {
+            return l;
+        } else if (l > r) {
+            biggerl = true;
+        }
+        String cacheKey = biggerl ? String.valueOf(l) + String.valueOf(r) : String.valueOf(r) + String.valueOf(l);
+        Integer lhm = leastCommonMultipleCache.get(cacheKey);
+        if (lhm != null) {
+            return lhm;
+        }
+
+        if (biggerl && l % r == 0) {
+            leastCommonMultipleCache.put(cacheKey, l);
             return l;
         }
-        if (r % l == 0) {
+        else if (!biggerl && r % l == 0) {
+            leastCommonMultipleCache.put(cacheKey, r);
             return r;
         }
         int com;
@@ -199,6 +226,7 @@ class Solution592 {
                 break;
             }
         }
+        leastCommonMultipleCache.put(cacheKey, com);
 
         return com;
     }

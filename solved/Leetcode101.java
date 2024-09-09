@@ -95,7 +95,8 @@ class Solution101 {
         boolean res = true;
 
         while (leftCur != null || rightCur != null) {
-            if (leftCur == null ^ rightCur == null || leftCur.val != rightCur.val) {
+            // if (leftCur == null ^ rightCur == null || leftCur.val != rightCur.val)
+            if (!(leftCur != null && rightCur != null) || leftCur.val != rightCur.val) {
                 return false;
             }
 
